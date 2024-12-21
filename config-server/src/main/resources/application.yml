@@ -1,0 +1,31 @@
+
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  security:
+    user:
+      name: user
+      password: 123
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          searchLocations: "[classpath:/, classpath:/config, classpath:/config/{application}, classpath:/config/{application}/{profile}]"
+#          searchLocations: "[classpath:/config]"
+#        git:
+#          uri: https://github.com/your-username/your-config-repo
+#          clone-on-start: true
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+
+server:
+  port: 8888
+
+config:
+  status: OKEY
