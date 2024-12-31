@@ -1,3 +1,14 @@
 
 config:
   status: OKSHAREDCONFIG
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://localhost:7020/eureka/
+#  #      ,http://admin:admin@eureka-tertiary:8013/eureka/
+#
+
+

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: common-client
+
+
+  config:
+    import: configserver:http://user:123@localhost:8888
+#    uri: http://localhost:8888
+#    import: optional:configserver:http://localhost:8888/config-server
+#    username: admin
+#    password: admin123
+#  cloud:
+#  cloud:
+#    config:
+#      enabled: false
+
+
+eureka:
+  instance:
+    hostname: common-client
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+#    service-url:
+#      defaultZone: http://localhost:7020/eureka/
+
+server:
+  port: 7011

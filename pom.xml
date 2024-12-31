@@ -17,7 +17,9 @@
 	<description>Demo project for Spring Boot config server with security</description>
 	<modules>
 		<module>config-server</module>
+		<module>eureka-server</module>
 		<module>config-client</module>
+		<module>common-client</module>
 	</modules>
 
 	<packaging>pom</packaging>
