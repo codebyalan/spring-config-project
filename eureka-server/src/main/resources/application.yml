@@ -1,0 +1,42 @@
+spring:
+  application:
+    name:  eureka-server
+#  config:
+##    #    uri: http://localhost:8888
+##    #    import: optional:configserver:http://localhost:8888/config-server
+#    import: configserver:http://user:123@localhost:8888
+##
+
+
+  cloud:
+    config:
+      enabled: false
+#      import-check:
+#        enabled: false
+  security:
+    user:
+      name: user
+      password: 123
+
+#    basic:
+#      enabled: false
+server:
+  port: 7020
+
+#security:
+#  basic:
+#    enabled: false
+#
+#logging.level.com.netflix.discovery: DEBUG
+#logging.level.com.netflix.eureka: DEBUG
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://user:123@localhost:7020/eureka/
